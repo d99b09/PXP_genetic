@@ -9,6 +9,7 @@ n=0
 
 new_list = []
 q, result= evolution(4, [0, 0, 0.35])
+FILENAME = "hemisphere.py"
 FILENAME1 = "Genetic_result.csv"
 
 with open(FILENAME, "r", newline="") as file:
@@ -26,7 +27,7 @@ with open(FILENAME, "r", newline="") as file:
                 q, result = evolution(4, coord)
 
             n += 1
-            print(n, result, round(time.time()+575-t,1))
+            print(n, result, round(time.time()-t,1))
 
             new_line = coord+q
 
